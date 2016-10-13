@@ -6,8 +6,8 @@ use SocialNorm\Providers\OAuth2Provider;
 class FacebookProvider extends OAuth2Provider
 {
     protected $authorizeUrl = "https://www.facebook.com/dialog/oauth";
-    protected $accessTokenUrl = "https://graph.facebook.com/v2.4/oauth/access_token";
-    protected $userDataUrl = "https://graph.facebook.com/v2.4/me";
+    protected $accessTokenUrl = "https://graph.facebook.com/v2.7/oauth/access_token";
+    protected $userDataUrl = "https://graph.facebook.com/v2.7/me";
     protected $scope = [
         'email',
     ];
@@ -88,7 +88,7 @@ class FacebookProvider extends OAuth2Provider
 
     protected function avatar()
     {
-        return 'https://graph.facebook.com/v2.4/'.$this->userId().'/picture';
+        return 'https://graph.facebook.com/v2.7/'.$this->userId().'/picture';
     }
 
     protected function email()
